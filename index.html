@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林昱諳 Hank Lin - 網路工程師 Resume Portfolio</title>
+    <meta name="description" content="林昱諳 (Hank Lin) 的個人履歷網站。具備前端、雲端架構與網路工程專長，致力於高可用基礎架構的建置與維運。">
+    <meta property="og:title" content="林昱諳 Hank Lin - Resume Portfolio">
+    <meta property="og:description" content="網路工程師、前端與雲端架構專長。">
+    <meta name="robots" content="index, follow">
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0f172a',
+                        accent: '#38bdf8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body
+    class="bg-gray-50 text-secondary dark:bg-gray-900 dark:text-gray-100 font-sans antialiased selection:bg-primary selection:text-white transition-colors duration-300">
+
+    <!-- Navbar -->
+    <header
+        class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-white/70 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="font-bold text-xl tracking-wider text-primary">Hank Lin</a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-sm font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-sm font-medium hover:text-primary transition-colors">About</a>
+                    <a href="#skills"
+                        class="nav-link text-sm font-medium hover:text-primary transition-colors">Skills</a>
+                    <a href="#experience"
+                        class="nav-link text-sm font-medium hover:text-primary transition-colors">Experience</a>
+                    <a href="#projects"
+                        class="nav-link text-sm font-medium hover:text-primary transition-colors">Projects</a>
+                    <a href="#contact"
+                        class="nav-link text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
+                <a href="#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800">Home</a>
+                <a href="#about"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800">About</a>
+                <a href="#skills"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800">Skills</a>
+                <a href="#experience"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800">Experience</a>
+                <a href="#projects"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800">Projects</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home"
+            class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
+            <!-- Decorative background elements -->
+            <div
+                class="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob">
+            </div>
+            <div
+                class="absolute top-40 right-10 w-72 h-72 bg-teal-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000">
+            </div>
+            <div
+                class="absolute -bottom-8 left-40 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-in-up">
+                <img src="images/myHead.jpg" alt="林昱諳 Profile Photo"
+                    class="w-32 h-32 rounded-full mx-auto mb-6 shadow-xl border-4 border-white dark:border-gray-800 object-cover">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">林昱諳 <span class="text-primary">Hank
+                        Lin</span></h1>
+                <h2 class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6 font-medium">網路工程師 / Network
+                    Engineer</h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-500 dark:text-gray-400 mb-8 leading-relaxed">
+                    你好，我是昱諳，正積極轉職網路工程師，透過系統性培訓與獨立專案實作，建立 Linux 系統管理、Cisco 設備配置、VMware 虛擬化與 AWS
+                    多組件架構的實務能力。期盼投入雲端與網路工程團隊，貢獻於高可用基礎架構的建置與維運。
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <a href="assets/resume.pdf" download="林昱諳_Resume.pdf"
+                        class="px-6 py-3 bg-primary text-white rounded-full font-medium shadow-lg shadow-blue-500/30 hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-gray-900">
+                        <i class="fas fa-file-pdf mr-2"></i> Download Resume
+                    </a>
+                    <a href="#contact"
+                        class="px-6 py-3 bg-white text-secondary border border-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-700 rounded-full font-medium shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200">
+                        Contact Me
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a href="mailto:hanker756954@gmail.com" aria-label="Email"
+                        class="text-gray-400 hover:text-primary transition-colors text-2xl">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/hankerBass1205" target="_blank" aria-label="GitHub"
+                        class="text-gray-400 hover:text-secondary dark:hover:text-white transition-colors text-2xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"
+                        class="text-gray-400 hover:text-blue-600 transition-colors text-2xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white dark:bg-gray-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight text-secondary dark:text-white sm:text-4xl">About Me
+                    </h2>
+                    <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="space-y-8 text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+                    <div
+                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-4 flex items-center"><i
+                                class="fas fa-rocket text-primary mr-3"></i> 轉職動機：跳出舒適圈，看好網路產業的無限可能</h3>
+                        <p>過去我是一名專業的樂器產業技術人員。雖然熱愛音樂，但深感傳統音樂產業的發展空間與天花板相對受限；與此同時，AI時代大爆發讓我看到了網路資訊產業的蓬勃發展與不可逆的數位趨勢。在接觸到程式設計與系統架構後，我被網路運作、資料流動與自動化服務的邏輯深深吸引，這份成就感讓我下定決心破釜沉舟，全面轉入網路與雲端工程領域。
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-4 flex items-center"><i
+                                class="fas fa-server text-primary mr-3"></i> 技術養成：系統化培訓與 AWS 雲端專案實作</h3>
+                        <p class="mb-3">為了快速紮實基本功，我參與了緯育的雲端網路工程師密集培訓。系統性地掌握了 TCP/IP、HTTP、DNS 等核心網路協定、Cisco 網路設備操作，以及
+                            Linux 系統管理與 CLI 指令，雲端架構的概念與AWS\GCP的操作。</p>
+                        <p class="mb-3">在培訓期間，我獨立建置了一套基於 AWS 架構的科技新聞搜集平台專案，實際演練「前後端分離」與「微服務拆分」的理念。我將系統拆分為前端、後端與爬蟲三個獨立模組：
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li><strong>雲端架構部署：</strong> 將服務部署於 AWS EC2進行網段分離，配置 ALB（應用程式負載平衡器）進行流量分發，確保高可用性。</li>
+                            <li><strong>系統監控與資料流：</strong> 透過 CloudWatch 建立系統監控與日誌審查機制，並串連Amazon Bedrock進行日誌輔助分析。</li>
+                            <li><strong>容器化技術：</strong> 導入 Docker 進行容器化封裝，確保開發與部署環境的一致性。</li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-4 flex items-center"><i
+                                class="fas fa-brain text-primary mr-3"></i> 高效協作：導入 AI 工具的現代化工程思維</h3>
+                        <p class="mb-3">在開發過程中，我並非盲目依賴 AI 給出答案，而是建立了一套「AI 輔助開發工作流」來強化解決問題的效率：</p>
+                        <ol class="list-decimal pl-6 space-y-2">
+                            <li><strong>架構構思：</strong> 先自主設計系統雛形與資料流向。</li>
+                            <li><strong>交叉驗證：</strong> 運用多個不同的 LLM（大型語言模型）針對架構的可行性、安全性與潛在瓶頸進行交叉驗證與流程優化。</li>
+                            <li><strong>精準控制：</strong> 透過不斷調整與優化 Prompt，提高 AI IDE（如 Antigravity /
+                                Cursor）在生成程式碼與進行系統除錯時的「可控性」與「精準度」。 這種與 AI 深度協作的經驗，培養了我快速查閱文件、新技術導入與敏捷修正 Bug 的工程思維。</li>
+                        </ol>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-4 flex items-center"><i
+                                class="fas fa-chart-line text-primary mr-3"></i> 未來展望：持續精進技術與考取國際證照</h3>
+                        <p class="mb-3">對於未來，我給自己設定了清晰的技術成長藍圖。入職後，我期望能將所學落地，協助團隊進行系統開發、自動化部署與網路運運維。</p>
+                        <p>為了驗證並深化自己的專業，我已規劃好短中期的證照考取計畫，預計在一年內根據工作需求優先挑戰取得 <strong>AWS Certified Solutions Architect –
+                                Associate</strong> 或 <strong>Cisco CCNA</strong>
+                            等網路與雲端國際證照。我有信心能將過去在音樂產業培養的細膩專注力與抗壓性，轉化為在技術領域持續迭代的動力，成為團隊中高效且可靠的即戰力。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight text-secondary dark:text-white sm:text-4xl">Skills &
+                        Expertise</h2>
+                    <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Network -->
+                    <div
+                        class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 transform hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-primary text-2xl">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-4">網路系統配置 (Cisco)</h3>
+                        <ul class="text-gray-600 dark:text-gray-400 space-y-2 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Switch：TCP/IP、Vlan、Trunking 設定</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Router：Static Route、OSPF動態路由設定</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> ACL、NAT、VPN 配置</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs font-medium rounded-full text-gray-600 dark:text-gray-300">#Cisco</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs font-medium rounded-full text-gray-600 dark:text-gray-300">#VLAN</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs font-medium rounded-full text-gray-600 dark:text-gray-300">#TCP/IP</span>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & DevOps -->
+                    <div
+                        class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 transform hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 bg-orange-100 dark:bg-orange-900/50 rounded-xl flex items-center justify-center mb-6 text-orange-500 text-2xl">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-4">雲端與 DevOps</h3>
+                        <ul class="text-gray-600 dark:text-gray-400 space-y-2 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> AWS：VPC, EC2, ALB, ECS, CloudWatch,
+                                Bedrock</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> GCP 基礎使用</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Docker 容器化部署</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> VMware vSphere 虛擬化</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Git/Github 專案協作</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs font-medium rounded-full text-gray-600 dark:text-gray-300">#AWS</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs font-medium rounded-full text-gray-600 dark:text-gray-300">#Docker</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs font-medium rounded-full text-gray-600 dark:text-gray-300">#Git</span>
+                        </div>
+                    </div>
+
+                    <!-- Programming -->
+                    <div
+                        class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 transform hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center mb-6 text-purple-500 text-2xl">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-4">程式開發</h3>
+                        <ul class="text-gray-600 dark:text-gray-400 space-y-2 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 前端：HTML5, CSS3, JS(ES6+)</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 框架：React.js, Next.js (App Router)</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 後端：Node.js, RESTful API, AJAX</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 樣式：Bootstrap5, Tailwind CSS</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs font-medium rounded-full text-gray-600 dark:text-gray-300">#ReactJS</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs font-medium rounded-full text-gray-600 dark:text-gray-300">#Node.js</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs font-medium rounded-full text-gray-600 dark:text-gray-300">#JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- System -->
+                    <div
+                        class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 transform hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 bg-green-100 dark:bg-green-900/50 rounded-xl flex items-center justify-center mb-6 text-green-500 text-2xl">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-4">系統操作</h3>
+                        <ul class="text-gray-600 dark:text-gray-400 space-y-2 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Linux CLI 操作與基礎系統管理</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 基礎協定理解：TCP/IP, DNS</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs font-medium rounded-full text-gray-600 dark:text-gray-300">#Linux</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs font-medium rounded-full text-gray-600 dark:text-gray-300">#DNS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-white dark:bg-gray-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight text-secondary dark:text-white sm:text-4xl">Experience
+                    </h2>
+                    <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div
+                    class="relative border-l-2 border-gray-200 dark:border-gray-700 ml-4 md:ml-0 md:mx-auto md:w-full md:flex md:flex-col md:items-center before:absolute before:inset-0 before:ml-[0px] md:before:mx-auto md:before:w-0.5 md:before:bg-gray-200 dark:md:before:bg-gray-700 before:border-none">
+
+                    <!-- Item 1 -->
+                    <div class="mb-10 ml-6 md:ml-0 md:flex md:w-full md:justify-between md:items-center relative">
+                        <div
+                            class="absolute -left-[31px] md:left-1/2 md:-ml-3 w-6 h-6 rounded-full bg-primary border-4 border-white dark:border-gray-900 shadow">
+                        </div>
+                        <div class="md:w-[45%] md:text-right pr-4 pb-2 md:pb-0">
+                            <h3 class="text-xl font-bold text-secondary dark:text-white">資安與雲端架構工程師養成班</h3>
+                            <p class="text-gray-500 dark:text-gray-400 font-medium text-sm mt-1">緯育股份有限公司附設中壢職業訓練中心</p>
+                            <span
+                                class="inline-block mt-2 px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-primary text-sm font-semibold rounded-full">2026/3
+                                ~ 2026/7</span>
+                        </div>
+                        <div
+                            class="md:w-[45%] pl-4 md:pl-8 bg-gray-50 dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300">
+                                完整學習網路概論、Linux系統操作、Cisco網路設備、雲端架構概念與AWS/GCP操作概念。完成AWS 雲端多組件系統專案-AI科技新聞Agent。</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div
+                        class="mb-10 ml-6 md:ml-0 md:flex md:w-full md:justify-between md:items-center md:flex-row-reverse relative">
+                        <div
+                            class="absolute -left-[31px] md:left-1/2 md:-ml-3 w-6 h-6 rounded-full bg-accent border-4 border-white dark:border-gray-900 shadow">
+                        </div>
+                        <div class="md:w-[45%] pl-4 md:pl-0 md:pr-8 pb-2 md:pb-0">
+                            <h3 class="text-xl font-bold text-secondary dark:text-white">前端工程師培訓班學員</h3>
+                            <p class="text-gray-500 dark:text-gray-400 font-medium text-sm mt-1">資展國際股份有限公司</p>
+                            <span
+                                class="inline-block mt-2 px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-primary text-sm font-semibold rounded-full">2024/10
+                                ~ 2025/3</span>
+                        </div>
+                        <div
+                            class="md:w-[45%] pl-4 md:pl-0 md:pr-8 md:text-right bg-gray-50 dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300">
+                                完成共540小時的完整前端工程師培訓課程，學習完整前端開發知識以及全端開發的概論，完成團體專案-露營網站設計與開發。</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="mb-10 ml-6 md:ml-0 md:flex md:w-full md:justify-between md:items-center relative">
+                        <div
+                            class="absolute -left-[31px] md:left-1/2 md:-ml-3 w-6 h-6 rounded-full bg-gray-400 border-4 border-white dark:border-gray-900 shadow">
+                        </div>
+                        <div class="md:w-[45%] md:text-right pr-4 pb-2 md:pb-0">
+                            <h3 class="text-xl font-bold text-secondary dark:text-white">樂器銷售與技術服務</h3>
+                            <p class="text-gray-500 dark:text-gray-400 font-medium text-sm mt-1">高雄真善美樂器行</p>
+                            <span
+                                class="inline-block mt-2 px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm font-semibold rounded-full">2020/7
+                                ~ 2024/4</span>
+                        </div>
+                        <div
+                            class="md:w-[45%] pl-4 md:pl-8 bg-gray-50 dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700">
+                            <ul class="text-gray-600 dark:text-gray-300 list-disc pl-5">
+                                <li>提供樂器產品技術諮詢與售後服務</li>
+                                <li>分析客戶需求並提供解決方案</li>
+                                <li>執行設備維修、調整與保養</li>
+                                <li>協助門市銷售流程優化</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div
+                        class="mb-10 ml-6 md:ml-0 md:flex md:w-full md:justify-between md:items-center md:flex-row-reverse relative">
+                        <div
+                            class="absolute -left-[31px] md:left-1/2 md:-ml-3 w-6 h-6 rounded-full bg-gray-400 border-4 border-white dark:border-gray-900 shadow">
+                        </div>
+                        <div class="md:w-[45%] pl-4 md:pl-0 md:pr-8 pb-2 md:pb-0">
+                            <h3 class="text-xl font-bold text-secondary dark:text-white">樂器教學</h3>
+                            <p class="text-gray-500 dark:text-gray-400 font-medium text-sm mt-1">自由接案</p>
+                            <span
+                                class="inline-block mt-2 px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm font-semibold rounded-full">2018/9
+                                ~ 2022/9</span>
+                        </div>
+                        <div
+                            class="md:w-[45%] pl-4 md:pl-0 md:pr-8 md:text-right bg-gray-50 dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300">獨立規劃教學課程，培養系統化思考與溝通表達能力。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight text-secondary dark:text-white sm:text-4xl">Project
+                        Portfolio</h2>
+                    <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div
+                        class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 flex flex-col h-full group">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/aws.png" alt="AWS 雲端多組件系統專案"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button onclick="openModal('modal-1')"
+                                    class="px-6 py-2 bg-white text-gray-900 font-medium rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-all duration-300">View
+                                    Details</button>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-secondary dark:text-white">AWS 雲端多組件系統專案-AI科技新聞Agent
+                                </h3>
+                                <span
+                                    class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">2026/5</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow text-sm">設計並部署前後端分離架構，系統拆分為前端、後端
+                                API、爬蟲三個獨立模組容器化無狀態部署，整合AI進行分析並透過MCP Server智慧查詢。</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">AWS</span>
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Docker</span>
+                                <span class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Bedrock
+                                    AI</span>
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Pinecone</span>
+                            </div>
+                            <div class="flex space-x-3 mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                                <a href="https://github.com/hankerBass1205/news_agent_aws" target="_blank"
+                                    class="text-gray-500 hover:text-primary transition-colors text-sm font-medium flex items-center">
+                                    <i class="fab fa-github mr-1"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div
+                        class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 flex flex-col h-full group">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/cisco_lab.png" alt="Cisco 企業網路設定Lab"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button onclick="openModal('modal-2')"
+                                    class="px-6 py-2 bg-white text-gray-900 font-medium rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-all duration-300">View
+                                    Details</button>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-secondary dark:text-white">Cisco 企業網路設定Lab</h3>
+                                <span
+                                    class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">2026/5</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow text-sm">於 Cisco Packet Tracer
+                                建置完整企業網路環境，完成 VLSM、VLAN、OSPF 等 Layer2/Layer3 網路配置，實作企業級網路安全與遠端管理機制。</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Cisco</span>
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">VLAN</span>
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">OSPF</span>
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">NAT/ACL</span>
+                            </div>
+                            <div class="flex space-x-3 mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                                <a href="#" target="_blank"
+                                    class="text-gray-500 hover:text-primary transition-colors text-sm font-medium flex items-center">
+                                    <i class="fas fa-file-alt mr-1"></i> Tech Doc
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div
+                        class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 flex flex-col h-full group">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://placehold.co/800x400?text=Camping+Platform" alt="露營電商網站"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button onclick="openModal('modal-3')"
+                                    class="px-6 py-2 bg-white text-gray-900 font-medium rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-all duration-300">View
+                                    Details</button>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-secondary dark:text-white">資展國際期末專題-露營電商網站</h3>
+                                <span
+                                    class="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-full">2024/12</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow text-sm">與小組合作完成網站，負責商品頁面與 API
+                                串接。開發商品、購物車、訂單與評論系統，並整合第三方金流 (LinePay/ECPay) 及物流 API，完成電商閉環。</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Next.js</span>
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">React</span>
+                                <span class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">RESTful
+                                    API</span>
+                                <span class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">3rd
+                                    Party API</span>
+                            </div>
+                            <div class="flex space-x-3 mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                                <a href="https://github.com/oriascrius/camping-platform" target="_blank"
+                                    class="text-gray-500 hover:text-primary transition-colors text-sm font-medium flex items-center">
+                                    <i class="fab fa-github mr-1"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div
+                        class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 flex flex-col h-full group">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/chord.png" alt="和弦查詢小工具"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button onclick="openModal('modal-4')"
+                                    class="px-6 py-2 bg-white text-gray-900 font-medium rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-all duration-300">View
+                                    Details</button>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-secondary dark:text-white">和弦查詢小工具</h3>
+                                <span
+                                    class="text-xs font-semibold px-2 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-full">Ongoing</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow text-sm">
+                                結合過往音樂教學經驗，開發互動式音樂視覺化工具，幫助使用者快速查詢與學習和弦組成。</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Next.js</span>
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">React</span>
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">TypeScript</span>
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Tailwind
+                                    CSS</span>
+                            </div>
+                            <div class="flex space-x-3 mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                                <span class="text-gray-400 text-sm font-medium flex items-center italic">
+                                    Development in progress...
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white dark:bg-gray-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section">
+                <h2 class="text-3xl font-bold tracking-tight text-secondary dark:text-white sm:text-4xl mb-6">Let's
+                    Connect</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
+                    尋找能夠發揮熱情與專長的舞台。如果您認為我的技能符合您的團隊需求，隨時歡迎與我聯繫！
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
+                    <a href="mailto:hanker756954@gmail.com"
+                        class="flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-primary text-white rounded-full font-medium shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300">
+                        <i class="fas fa-paper-plane mr-3 text-lg"></i> hanker756954@gmail.com
+                    </a>
+
+                </div>
+
+                <div class="flex justify-center space-x-8">
+                    <a href="https://github.com/hankerBass1205" target="_blank"
+                        class="w-14 h-14 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-all duration-300 text-2xl transform hover:scale-110">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank"
+                        class="w-14 h-14 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-100 hover:text-blue-600 dark:hover:bg-blue-900/30 dark:hover:text-blue-500 transition-all duration-300 text-2xl transform hover:scale-110">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 dark:bg-gray-950 py-8 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 md:mb-0">
+                &copy; 2026 Hanker Lin. All rights reserved.
+            </p>
+            <a href="#home"
+                class="text-gray-400 hover:text-primary transition-colors flex items-center text-sm font-medium">
+                Back to top <i class="fas fa-arrow-up ml-2"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Modals (Placeholders for Project Details) -->
+    <!-- Modal 1 -->
+    <div id="modal-1"
+        class="fixed inset-0 z-[60] hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div
+            class="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300">
+            <div class="p-6 md:p-8">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 class="text-2xl font-bold text-secondary dark:text-white">AWS 雲端多組件系統專案-AI科技新聞Agent</h3>
+                    <button onclick="closeModal('modal-1')"
+                        class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <img src="images/aws.png" class="w-full h-64 object-cover rounded-xl mb-6" alt="Project detail">
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>這是一個基於 AWS 架構的科技新聞搜集平台專案，實際演練「前後端分離」與「微服務拆分」的理念。</p>
+                    <ul>
+                        <li>前後端服務部署於 AWS EC2，分離網段並透過 ALB 進行流量分配。</li>
+                        <li>爬蟲程式獨立設置ECS Fargate、EventBridge自動排程。</li>
+                        <li>整合 CloudWatch 監控與日誌追蹤，串連AI工具分析服務運行狀態與異常告警。</li>
+                        <li>串接 Pinecone 向量資料庫，實現新聞資料的語義查詢與高效檢索。</li>
+                        <li>獨立設計MCP Server可使用聊天機器人分析帳單以及調取特定log進行智慧分析。</li>
+                    </ul>
+                </div>
+                <div class="mt-8 flex flex-wrap justify-end gap-4">
+                    <a href="https://drive.google.com/file/d/1ZEnIEZ8x6oSKDxNHibXdTLE8RRS6Hx8-/view?usp=sharing"
+                        target="_blank"
+                        class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center">
+                        <i class="fas fa-file-alt mr-2"></i> 完整專案文件
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=riu-RjR7SIw" target="_blank"
+                        class="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors flex items-center">
+                        <i class="fab fa-youtube mr-2"></i> 專案報告影片
+                    </a>
+                    <a href="https://github.com/hankerBass1205/news_agent_aws" target="_blank"
+                        class="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors flex items-center">
+                        <i class="fab fa-github mr-2"></i> View Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal-2"
+        class="fixed inset-0 z-[60] hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div
+            class="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300">
+            <div class="p-6 md:p-8">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 class="text-2xl font-bold text-secondary dark:text-white">Cisco 企業網路設定Lab</h3>
+                    <button onclick="closeModal('modal-2')"
+                        class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <img src="images/cisco_lab.png" class="w-full h-64 object-cover rounded-xl mb-6" alt="Project detail">
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>於緯育雲端網路工程師班受訓期間，完成業界知名講師<strong>戴致禮（Travis Tai)</strong>老師設計的Cisco企業網路設定Lab。</p>
+                    <p>根據企業網路需求與拓墣設計，於 Cisco Packet Tracer 建置完整企業網路環境。</p>
+                    <ul>
+                        <li>完成 VLSM、VLAN / Trunk、Inter-VLAN Routing、OSPF Dynamic Routing 等 Layer2／Layer3 網路配置。</li>
+                        <li>實作 Multiple NAT、DMZ ACL、IPSec VPN、SSHv2 等企業級網路安全與遠端管理機制。</li>
+                        <li>透過 Ping、Routing Table、OSPF Neighbor 等方式驗證網路連通性，並完成完整 Lab 技術紀錄。</li>
+                    </ul>
+                </div>
+                <div class="mt-8 flex justify-end">
+                    <a href="https://drive.google.com/file/d/1Xo_i8p9Z3A2ttQHkDysFluWnYLjJeAOT/view?usp=drive_link"
+                        target="_blank"
+                        class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center">
+                        <i class="fas fa-file-alt mr-2"></i> LAB文件
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal-3"
+        class="fixed inset-0 z-[60] hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div
+            class="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300">
+            <div class="p-6 md:p-8">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 class="text-2xl font-bold text-secondary dark:text-white">資展國際期末專題-露營電商網站</h3>
+                    <button onclick="closeModal('modal-3')"
+                        class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <img src="https://placehold.co/800x400?text=Camping+Platform"
+                    class="w-full h-64 object-cover rounded-xl mb-6" alt="Project detail">
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>與小組合作完成網站，負責商品相關頁面與功能製作。</p>
+                    <ul>
+                        <li><strong>商品頁面的前端設計與API設計與串接</strong></li>
+                        <li><strong>API 開發與資料庫規劃：</strong> 使用 Next.js App Router 獨立設計並實作商品、購物車、訂單與評論系統的 RESTful
+                            API，並完成關聯資料表 (Schema) 與 CRUD 規劃。</li>
+                        <li><strong>第三方金流與物流整合：</strong> 成功串接 LinePay 與 綠界科技 (ECPay) 支付環境，並整合 7-11 門市選擇器
+                            API，完成從下單到結帳的完整電商閉環。</li>
+                        <li><strong>複雜業務邏輯處理：</strong> 實作動態訂單運算機制，精確處理商品小計、運費、優惠券折扣計算；並結合 Session 管理，實現訂單資料與會員驗證的無縫接軌。
+                        </li>
+                        <li><strong>全局狀態管理：</strong> 開發自訂 React Hooks 處理全局購物車狀態（跨元件即時更新數量與金額），確保前後端資料流動的一致性與流暢的使用者體驗。
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-8 flex flex-wrap justify-end gap-4">
+                    <a href="https://www.youtube.com/watch?v=wueCA2a8Yv8&t=15s" target="_blank"
+                        class="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors flex items-center">
+                        <i class="fab fa-youtube mr-2"></i> Demo展示影片
+                    </a>
+                    <a href="https://github.com/oriascrius/camping-platform" target="_blank"
+                        class="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors flex items-center">
+                        <i class="fab fa-github mr-2"></i> View Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal-4"
+        class="fixed inset-0 z-[60] hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div
+            class="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300">
+            <div class="p-6 md:p-8">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 class="text-2xl font-bold text-secondary dark:text-white">和弦查詢小工具</h3>
+                    <button onclick="closeModal('modal-4')"
+                        class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <img src="images/chord.png" class="w-full h-64 object-cover rounded-xl mb-6" alt="Project detail">
+                <div class="prose dark:prose-invert max-w-none">
+                    <p>結合過往音樂教學經驗，開發互動式音樂視覺化工具，幫助使用者快速查詢與學習和弦組成。</p>
+                    <ul>
+                        <li>使用 Next.js、React、TypeScript、TailwindCSS 開發的互動式音樂視覺化工具。</li>
+                    </ul>
+                </div>
+                <div class="mt-8 flex justify-end">
+                    <a href="https://chord-tone-search.vercel.app/" target="_blank"
+                        class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center">
+                        <i class="fas fa-external-link-alt mr-2"></i> 瀏覽已部署服務
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script to handle modals -->
+    <script>
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('hidden');
+                // Small delay to allow display:block to apply before animating opacity
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.querySelector('div').classList.remove('scale-95');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add('opacity-0');
+                modal.querySelector('div').classList.add('scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal on outside click
+        window.onclick = function (event) {
+            if (event.target.classList.contains('fixed') && event.target.classList.contains('inset-0')) {
+                const modals = document.querySelectorAll('.fixed.inset-0');
+                modals.forEach(modal => {
+                    if (!modal.classList.contains('hidden')) {
+                        closeModal(modal.id);
+                    }
+                });
+            }
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
